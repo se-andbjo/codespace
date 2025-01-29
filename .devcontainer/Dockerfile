@@ -25,10 +25,10 @@ COPY scripts/ /workspace/scripts/
 RUN chmod +x /workspace/scripts/*.sh
 
 # Create the ~/.bash_aliases file and add aliases
-RUN touch /home/codespace/.bash_aliases && \
-    for script in /workspace/scripts/*.sh; do \
-    if [ -f "$script" ]; then \
-      script_name=$(basename "$script" .sh); \
-      echo "alias $script_name='bash $script'" | tee -a /home/codespace/.bash_aliases; \
-    fi; \
-  done
+# RUN touch /home/codespace/.bash_aliases && \
+#    for script in /workspace/scripts/*.sh; do \
+#    if [ -f "$script" ]; then \
+#      script_name=$(basename "$script" .sh); \
+#      echo "alias $script_name='bash $script'" | tee -a /home/codespace/.bash_aliases; \
+#    fi; \
+#  done
