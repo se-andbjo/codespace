@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Copy the scripts to the container
-COPY scripts/ /workspace/scripts/
+COPY scripts/* /workspace/scripts/
 
 # Make all scripts executable
 RUN chmod +x /workspace/scripts/*.sh
