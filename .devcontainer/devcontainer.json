@@ -1,4 +1,3 @@
 {
-    "build": { "dockerfile": "Dockerfile" },
-    "postCreateCommand": "for script in /workspace/scripts/*.sh; do \\\n    if [ -f \"$script\" ]; then \\\n      script_name=$(basename \"$script\" .sh); \\\n      echo \"alias $script_name='bash $script'\" >> ~/.bash_aliases; \\\n    fi; \\\n  done && echo \"if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi\" >> ~/.bashrc"
+    "build": { "dockerfile": "Dockerfile" }
 }
