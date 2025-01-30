@@ -21,6 +21,12 @@ case "$1" in
     ;;
 esac
 
+# Authenticate with IAM
+if ! gcloud auth print-access-token &> /dev/null; then
+    echo "Login session is invalid or expired."
+    gcloud auth login
+fi
+
 # Sets the region
 gcloud config set run/region europe-west1
 
