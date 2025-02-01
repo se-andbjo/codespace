@@ -7,5 +7,10 @@
                 "ms-azuretools.vscode-docker"
             ]
         }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
     }
 }
